@@ -1,0 +1,26 @@
+@import '../style/style.scss';
+
+.game {
+  height: 450px;
+  width: 500px;  
+  background-image: url('../../images/bg-triangle.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  position: relative;
+  
+  
+  .paper, .scissors, .rock {
+    position: absolute;
+  }
+
+  .scissors {
+    right: 0;
+  }
+
+  .rock {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

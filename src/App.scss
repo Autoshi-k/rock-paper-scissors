@@ -1,0 +1,13 @@
+@import './components/style/style.scss';
+
+body {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.App {
+  // padding: 3em 0 0;
+  text-align: center;
+  height: 100vh;
+  background: rgb(226,255,252);
+  background: radial-gradient(circle, $background-light 0%, $background-dark 100%);
+}

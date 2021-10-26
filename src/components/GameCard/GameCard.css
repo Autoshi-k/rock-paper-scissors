@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+.game-card {
+  border-radius: 100px;
+  height: 200px;
+  width: 200px;
+  background: #4865f4;
+  background: -webkit-gradient(linear, left bottom, left top, from(#4865f4), to(#5671f5));
+  background: linear-gradient(0deg, #4865f4 0%, #5671f5 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.game-card.rock {
+  background: #dc2e4e;
+  background: -webkit-gradient(linear, left bottom, left top, from(#dc2e4e), to(#dd405d));
+  background: linear-gradient(0deg, #dc2e4e 0%, #dd405d 100%);
+}
+
+.game-card.scissors {
+  background: #ec9e0e;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ec9e0e), to(#eca922));
+  background: linear-gradient(0deg, #ec9e0e 0%, #eca922 100%);
+}
+
+.icon-of-attack {
+  height: 80%;
+  width: 80%;
+  background: white;
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=GameCard.css.map */

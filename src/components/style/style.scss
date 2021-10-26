@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+// Scissors
+$orange-dark: hsl(39, 89%, 49%);
+$orange-light: hsl(40, 84%, 53%);
+// Paper
+$blue-dark: hsl(230, 89%, 62%);
+$blue-light: hsl(230, 89%, 65%);
+// Rock
+$red-dark: hsl(349, 71%, 52%);
+$red-light: hsl(349, 70%, 56%);
+
+$dark-text: hsl(229, 25%, 31%);
+$scoreText: hsl(229, 64%, 46%);
+$header-outline: hsl(217, 16%, 45%);
+
+// Backgound colors
+$background-dark: hsl(237, 49%, 15%);
+$background-light: hsl(214, 47%, 23%);
+
+@mixin Gradient($first, $last) {
+  background: $first;
+  background: linear-gradient(0deg, $first 0%, $last 100%);
+}
+
+@mixin Flex-Center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

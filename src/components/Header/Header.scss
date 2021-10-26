@@ -1,0 +1,28 @@
+@import "../style/style.scss";
+
+header {
+  border-radius: 15px;
+  border: 2px solid $header-outline;
+  display: flex;
+  justify-content: space-between;
+  width: 1500px;
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.score-display {
+  background: white;
+  border-radius: 15px;
+  width: 5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $scoreText;
+  padding: .5em 1em;
+
+}
+
+.score {
+  font-size: 3rem;
+  color: $dark-text;
+}

@@ -1,0 +1,25 @@
+@import '../style/style.scss';
+
+.game-card {
+  border-radius: 100px;
+  height: 200px;
+  width: 200px;
+  @include Gradient($blue-dark, $blue-light);
+  @include Flex-Center();
+}
+
+.game-card.rock {
+  @include Gradient($red-dark, $red-light);
+}
+
+.game-card.scissors {
+  @include Gradient($orange-dark, $orange-light);
+}
+
+.icon-of-attack {
+  height: 80%;
+  width: 80%;
+  background: white;
+  border-radius: 100px;
+  @include Flex-Center();
+}

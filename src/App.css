@@ -8,5 +8,6 @@ body {
   height: 100vh;
   background: #e2fffc;
   background: radial-gradient(circle, #1f3756 0%, #141539 100%);
+  overflow: auto;
 }
 /*# sourceMappingURL=App.css.map */

@@ -10,4 +10,5 @@ body {
   height: 100vh;
   background: rgb(226,255,252);
   background: radial-gradient(circle, $background-light 0%, $background-dark 100%);
+  overflow: auto;
 }

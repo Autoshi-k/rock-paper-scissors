@@ -20,7 +20,9 @@ $background-light: hsl(214, 47%, 23%);
 
 @mixin Gradient($first, $last) {
   background: $first;
+  $darken-last: darken($last, 20%);
   background: linear-gradient(0deg, $first 0%, $last 100%);
+    -webkit-box-shadow: inset 0px -6px 1px $darken-last;
 }
 
 @mixin Flex-Center() {

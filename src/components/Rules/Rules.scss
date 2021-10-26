@@ -1,0 +1,16 @@
+@import '../style/style.scss';
+
+.rules {
+  position: absolute;
+  bottom: 3em;
+  right: 2em;
+  width: 10em;
+  height: 3.5em;
+  border-radius: 15px;
+  border: 3px solid $header-outline;
+  background: transparent;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}

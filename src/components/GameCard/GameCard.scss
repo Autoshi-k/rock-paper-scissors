@@ -14,12 +14,18 @@
 
 .game-card.scissors {
   @include Gradient($orange-dark, $orange-light);
+
 }
 
 .icon-of-attack {
-  height: 80%;
-  width: 80%;
+  height: 75%;
+  width: 75%;
   background: white;
   border-radius: 100px;
   @include Flex-Center();
+  box-shadow: inset 0 8px 1px rgb(209, 209, 209);
+
+  img {
+    height: 4em;
+  }
 }

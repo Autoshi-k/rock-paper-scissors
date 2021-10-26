@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
 header {
   border-radius: 15px;
-  border: 2px solid #606e85;
+  border: 3px solid #606e85;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,18 +10,18 @@ header {
           justify-content: space-between;
   width: 1500px;
   max-width: 50%;
-  margin: 0 auto;
-  padding: 2em;
+  margin: 3rem auto;
+  padding: 1em 1.5em;
 }
 
 .score-display {
   background: white;
-  border-radius: 15px;
+  border-radius: 10px;
   width: 5em;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #2a46c0;
-  padding: .5em 1em;
+  padding: .5em 1.2em;
 }
 
 .score {

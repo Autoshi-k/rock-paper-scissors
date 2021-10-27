@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 16px;
 }
 
 .App {
@@ -11,4 +12,10 @@ body {
   background: rgb(226,255,252);
   background: radial-gradient(circle, $background-light 0%, $background-dark 100%);
   overflow: auto;
+}
+
+@media (max-width: 610px) {
+  body {
+    font-size: 12px;
+  }
 }

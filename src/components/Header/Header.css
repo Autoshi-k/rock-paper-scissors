@@ -8,8 +8,8 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 1500px;
-  max-width: 50%;
+  width: 800px;
+  max-width: 70%;
   margin: 3rem auto;
   padding: 1em 1.5em;
 }
@@ -27,5 +27,11 @@ header {
 .score {
   font-size: 3rem;
   color: #3b4363;
+}
+
+@media (max-width: 610px) {
+  header img {
+    height: 7em;
+  }
 }
 /*# sourceMappingURL=Header.css.map */

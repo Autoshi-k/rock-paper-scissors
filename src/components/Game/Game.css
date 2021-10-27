@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
 .game {
-  height: 450px;
-  width: 500px;
+  height: 25em;
+  width: 30em;
+  max-width: 90%;
   background-image: url("../../images/bg-triangle.svg");
   background-position: center;
   background-repeat: no-repeat;

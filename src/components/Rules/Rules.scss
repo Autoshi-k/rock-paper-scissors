@@ -14,3 +14,10 @@
   letter-spacing: 2px;
   cursor: pointer;
 }
+
+@media (max-width: 610px) {
+  .rules {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -2,8 +2,8 @@
 
 .game-card {
   border-radius: 100px;
-  height: 200px;
-  width: 200px;
+  height: 11em;
+  width: 11em;
   @include Gradient($blue-dark, $blue-light);
   @include Flex-Center();
 }
@@ -27,5 +27,11 @@
 
   img {
     height: 4em;
+  }
+}
+
+@media (min-width: 610px) {
+  .game-card {
+    // font-size: ;
   }
 }

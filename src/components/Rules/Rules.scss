@@ -15,9 +15,63 @@
   cursor: pointer;
 }
 
+// DISPLAY RULES
+.display-rules {
+  height: 21em;
+  width: 21em;
+  border-radius: 15px;
+  background-color: white;
+  color: $dark-text;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-flow: row wrap;
+  padding: 2rem;
+  justify-content: space-between;
+  z-index: 4;
+
+
+
+  h3, .close-display {
+    text-align: left;
+    font-size: 2rem;
+    margin: 0 0 1em;
+  }
+
+  .close-display {
+    text-align: right;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+  }
+}
+
+
 @media (max-width: 610px) {
   .rules {
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .display-rules {
+    width: 100vw;
+    height: 100vh;
+    position: block;
+    padding: 0;
+    border-radius: unset;
+
+    h3, .close-display {
+      text-align: center;
+      margin: 2em 0 3em;
+    }
+
+    .close-display {
+      left: 50%;
+      bottom: -2em;
+      top: unset;
+      transform: translateX(-50%);
+    }
   }
 }

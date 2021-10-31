@@ -12,6 +12,14 @@ body {
   overflow: auto;
 }
 
+.blur-background {
+  position: fixed;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0.5);
+}
+
 @media (max-width: 610px) {
   body {
     font-size: 12px;

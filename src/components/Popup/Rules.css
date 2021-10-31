@@ -1,20 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
-.rules {
+.blur-background {
   position: absolute;
-  bottom: 3em;
-  right: 2em;
-  width: 10em;
-  height: 3.5em;
-  border-radius: 15px;
-  border: 3px solid #606e85;
-  background: transparent;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  cursor: pointer;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
 }
 
-.display-rules {
+.popup {
   height: 21em;
   width: 21em;
   border-radius: 15px;
@@ -36,13 +28,13 @@
   z-index: 4;
 }
 
-.display-rules h3, .display-rules .close-display {
+.popup h3, .popup .close-popup {
   text-align: left;
   font-size: 2rem;
   margin: 0 0 1em;
 }
 
-.display-rules .close-display {
+.popup .close-popup {
   text-align: right;
   position: absolute;
   top: 2rem;
@@ -51,23 +43,18 @@
 }
 
 @media (max-width: 610px) {
-  .rules {
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-  .display-rules {
+  .popup {
     width: 100vw;
     height: 100vh;
     position: block;
     padding: 0;
     border-radius: unset;
   }
-  .display-rules h3, .display-rules .close-display {
+  .popup h3, .popup .close-popup {
     text-align: center;
     margin: 2em 0 3em;
   }
-  .display-rules .close-display {
+  .popup .close-popup {
     left: 50%;
     bottom: -2em;
     top: unset;

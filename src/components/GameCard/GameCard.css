@@ -3,6 +3,7 @@
   border-radius: 100px;
   height: 11em;
   width: 11em;
+  cursor: pointer;
   background: #4865f4;
   background: -webkit-gradient(linear, left bottom, left top, from(#4865f4), to(#5671f5));
   background: linear-gradient(0deg, #4865f4 0%, #5671f5 100%);

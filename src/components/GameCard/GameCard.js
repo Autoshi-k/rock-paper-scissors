@@ -1,14 +1,10 @@
 import './GameCard.css';
-import paper from '../../images/icon-paper.svg';
-import scissors from '../../images/icon-scissors.svg';
-import rock from '../../images/icon-rock.svg';
 
-
-function GameCard({ attackType }) {
+function GameCard({ attackType, gameOn, src }) {
   return (
-    <div className={ "game-card " + attackType }>
+    <div className={ "game-card " + attackType } onClick={ () => gameOn() }>
       <div className="icon-of-attack">
-        <img src={ attackType === 'paper' ? paper : attackType === 'rock' ? rock : scissors } alt={ attackType + 'attack' }/>
+        <img src={ src } alt={ attackType + ' attack' }/>
       </div>
     </div>
   );

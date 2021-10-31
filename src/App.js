@@ -2,22 +2,19 @@ import './App.css';
 import { useState } from 'react'; 
 import Header from './components/Header/Header';
 import Game from './components/Game/Game';
-import Rules from './components/Rules/Rules';
-
+import Popup from './components/Popup/Popup';
 
 function App() {
   
-  const [displayRules, setDisplayRules] = useState(false);
-  const displayRulesWindow = () => {
-    setDisplayRules(!displayRules);
-  }
+  const [popupDisplay, setPopupDisplay] = useState(false);
+  const togglePopup = () => { setPopupDisplay(!popupDisplay) };
 
   return (
     <div className="App">
-      { displayRules && <div className="blur-background"></div> }
       <Header />
       <Game />
-      <Rules displayRules={ displayRules } displayRulesWindow={ displayRulesWindow }/>
+      <button className="show-rules" onClick={ togglePopup }>Rules</button>
+      { popupDisplay && <Popup togglePopup={ togglePopup }/> }
     </div>
   );
 }

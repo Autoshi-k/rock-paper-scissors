@@ -4,6 +4,7 @@
   border-radius: 100px;
   height: 11em;
   width: 11em;
+  cursor: pointer;
   @include Gradient($blue-dark, $blue-light);
   @include Flex-Center();
 }

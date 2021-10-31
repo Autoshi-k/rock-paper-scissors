@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,+FAAI;ADEZ,AAAA,WAAW,CAAC;EACV,KAAK,EAAE,KAAK;EACZ,SAAS,EAAE,GAAG;ECwBd,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EDxBnB,gBAAgB,EAAE,MAAM;CACzB;;AAED,AAAA,KAAK,CAAC;EACJ,SAAS,EAAE,aAAa;EACxB,WAAW,EAAE,MAAM;EACnB,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,cAAc;CACvB",
+    "sources": [
+        "GameStage.scss",
+        "../style/style.scss"
+    ],
+    "names": [],
+    "file": "GameStage.css"
+}

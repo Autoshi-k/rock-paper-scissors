@@ -2,11 +2,11 @@
 
 
 .pick {
-  flex-flow: column nowrap;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   height: 15em;
-  // background-color: yellowgreen;
   width: 350px;
   font-size: 1.6rem;
 
@@ -16,8 +16,20 @@
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    // margin: 0;
   }
 
 }
 
+@media (max-width: 610px) {
+  .pick {
+    font-size: .8rem;
+    flex-direction: column-reverse;
+    margin-top: 10vh;
+
+
+    h3 {
+      font-size: 1rem;
+    }
+
+  }
+}

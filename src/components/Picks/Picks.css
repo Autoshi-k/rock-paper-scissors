@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
 .pick {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -21,5 +24,19 @@
   font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+@media (max-width: 610px) {
+  .pick {
+    font-size: .8rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-top: 10vh;
+  }
+  .pick h3 {
+    font-size: 1rem;
+  }
 }
 /*# sourceMappingURL=Picks.css.map */

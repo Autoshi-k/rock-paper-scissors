@@ -1,0 +1,32 @@
+@import '../style/style.scss';
+
+.game-result {
+  width: auto;
+  text-transform: uppercase;
+  margin: 4em 1em 0;
+  
+  h1 {
+    font-size: 3.8rem;
+    margin: 0 0 .3em;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  button {
+    text-transform: uppercase;
+    width: 100%;
+    height: 3em;
+    font-size: 1.2rem;
+    background-color: white;
+    color: $background-dark;
+    border-radius: .3em;
+    border: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    color: $red-dark;
+  }
+}

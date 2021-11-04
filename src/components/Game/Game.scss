@@ -27,8 +27,9 @@
 }
 
 .game-stage {
-  width: 700px;
+  // width: 700px;
   max-width: 90%;
   @include Flex-Center;
   margin: 0 auto;
 }
+

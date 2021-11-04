@@ -1,10 +1,13 @@
+import ComputerPick from "../ComputerPick/ComputerPick";
 import GameCard from "../GameCard/GameCard";
+import './Picks.css';
 
-function Picks({ title, attackType }) {
+function Picks({ title, index }) {
+
   return (
     <div className="pick">
         <h3>{ title }</h3>
-        { attackType ? <div className="empy-attack-slot"></div> : <GameCard attackType={ attackType }/>}
+        { (!index) ? <ComputerPick /> : <GameCard attackIndex={ index } />}
     </div>
   );
 }

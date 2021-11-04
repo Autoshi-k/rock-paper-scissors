@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import Halp from "./halp";
 import Hellow from "./testContext";
 
 
 function Test() {
 
-  const pain = [1, 2, 3];
+  // const pain = [1, 2, 3];
+  const pain = useContext(Hellow);
   console.log(pain);
   return (
     <Hellow.Provider value={ pain }>

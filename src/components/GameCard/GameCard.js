@@ -1,10 +1,17 @@
+import { useContext } from 'react';
+import Attacks from '../../AttackContext';
 import './GameCard.css';
 
-function GameCard({ attackType, gameOn, src }) {
+function GameCard({ attackIndex, gameOn }) {
+  const attacks = useContext(Attacks);
+  const thisAttack = attacks[attackIndex-1];
+  // console.log(attackIndex);
+  // console.log(thisAttack);
+  
   return (
-    <div className={ "game-card " + attackType } onClick={ () => gameOn() }>
+    <div className={ "game-card " + thisAttack.type } onClick={ () => gameOn(thisAttack.index) }>
       <div className="icon-of-attack">
-        <img src={ src } alt={ attackType + ' attack' }/>
+        <img src={ thisAttack.src } alt={ thisAttack + ' attack' }/>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Header from './components/Header/Header';
 import Game from './components/Game/Game';
 import Popup from './components/Popup/Popup';
-import Test from './test/test';
+// import Test from './test/test';
 
 function App() {
   
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Test />
+      {/* <Test /> */}
       <Game />
       <button className="show-rules" onClick={ togglePopup }>Rules</button>
       { popupDisplay && <Popup togglePopup={ togglePopup }/> }

@@ -1,7 +1,7 @@
 @import '../style/style.scss';
 
 .game-card {
-  border-radius: 100px;
+  border-radius: 6em;
   height: 11em;
   width: 11em;
   cursor: pointer;
@@ -22,11 +22,18 @@
   height: 75%;
   width: 75%;
   background: white;
-  border-radius: 100px;
+  border-radius: 5em;
   @include Flex-Center();
   box-shadow: inset 0 8px 1px rgb(209, 209, 209);
 
   img {
     height: 4em;
   }
+}
+
+
+.pick .game-card {
+  // outline: 3em solid pink;
+  // align-self: center;
+  margin: 0 auto;
 }

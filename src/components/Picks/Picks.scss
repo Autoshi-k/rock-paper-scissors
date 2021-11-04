@@ -1,15 +1,23 @@
 @import '../style/style.scss';
 
-.game-stage {
-  width: 700px;
-  max-width: 90%;
-  @include Flex-Center;
-  background-color: violet;
-}
 
 .pick {
   flex-flow: column nowrap;
   align-items: center;
+  justify-content: space-between;
+  height: 15em;
+  // background-color: yellowgreen;
   width: 350px;
-  border: 1px solid pink;
+  font-size: 1.6rem;
+
+  h3 {
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    // margin: 0;
+  }
+
 }
+

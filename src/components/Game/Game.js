@@ -2,30 +2,31 @@ import Picks from '../Picks/Picks';
 import GameCard from '../GameCard/GameCard';
 import './Game.css';
 import { useState } from 'react/cjs/react.development';
-import paper from '../../images/icon-paper.svg';
-import scissors from '../../images/icon-scissors.svg';
-import rock from '../../images/icon-rock.svg';
+// import { useContext } from 'react';
+// import Attacks from '../../AttackContext';
 
 
 function Game() {
 
+  // const attacks = useContext(Attacks);
+
   const [gameState, setGameState] = useState(false);
-  const gameOn = (attackType) => {
-    setGameState(!gameState);
+  const gameOn = (userAttackType) => {
+    setGameState(userAttackType); // saving in gameState user's attack 
   }
 
   return (
     <>
       { !gameState ? (
       <div className="game">
-        <GameCard attackType="paper" gameOn = { gameOn } src={ paper } />
-        <GameCard attackType="scissors" gameOn = { gameOn } src={ scissors } />
-        <GameCard attackType="rock" gameOn = { gameOn } src={ rock } />
+        <GameCard attackIndex={ 1 } gameOn = { gameOn } />
+        <GameCard attackIndex={ 2 } gameOn = { gameOn } />
+        <GameCard attackIndex={ 3 } gameOn = { gameOn } />
       </div>
       ) : (
-      <div className="">
-        <Picks title="you picked" />
-        <Picks title="the house picked" />
+      <div className="game-stage">
+        <Picks title="you picked" index={ gameState }/>
+        <Picks title="the house picked" index={ 0 } />
       </div>
       ) }
 

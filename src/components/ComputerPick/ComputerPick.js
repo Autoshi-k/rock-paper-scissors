@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import GameCard from '../GameCard/GameCard';
 import './ComputerPick.css';
 
-function ComputerPick(params) {
+function ComputerPick() {
 
   const [computePick, setComputerPick] = useState(false);
   const [random, setRandom] = useState(null);

@@ -11,7 +11,7 @@ function Game() {
 
   const [gameState, setGameState] = useState(false);
   const gameOn = (userAttackType) => {
-    setGameState(userAttackType); // saving in gameState user's attack 
+    setGameState([userAttackType]); // saving in gameState user's attack 
   }
 
   const [result, setResult] = useState(false);

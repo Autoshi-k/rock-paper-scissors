@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import Attacks from '../../AttackContext';
+import Attacks from '../../Context/AttackContext';
 import './GameCard.css';
 
 function GameCard({ attackIndex, gameOn }) {

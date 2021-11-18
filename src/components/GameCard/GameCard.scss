@@ -4,7 +4,6 @@
   border-radius: 6em;
   height: 11em;
   width: 11em;
-  cursor: pointer;
   @include Gradient($blue-dark, $blue-light);
   @include Flex-Center();
 }
@@ -33,7 +32,5 @@
 
 
 .pick .game-card {
-  // outline: 3em solid pink;
-  // align-self: center;
   margin: 0 auto;
 }

@@ -1,28 +1,28 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useContext } from 'react';
+import MovesContext from '../../Context/MovesContext';
 import GameCard from '../GameCard/GameCard';
 import './ComputerPick.css';
 
 function ComputerPick() {
 
-  const [computePick, setComputerPick] = useState(false);
-  const [random, setRandom] = useState(null);
-
+  const { Moves, setMoves } = useContext(MovesContext);
+  const [randomPcAttack, setRandomPcAttack] = useState(Math.ceil(Math.random() * 3));
+  const emptySpot = useRef(null);
+  
   useEffect(() => {
     const timer = setTimeout(() => {
       emptySpot.current.remove();
-      setRandom(Math.ceil(Math.random() * 3));
-      setComputerPick(!computePick);
+      setMoves({...Moves, pc: randomPcAttack});
       }, 2000);
       return () => clearTimeout(timer);
     }, []);
 
 
-  const emptySpot = useRef(null);
 
   return(
     <>
       <div className="computer-pick" ref={ emptySpot }></div>
-      { computePick && <GameCard attackIndex={ random }/>}
+      { Moves.pc && <GameCard attackIndex={ randomPcAttack }/>}
     </>
   );
 }

@@ -3,34 +3,36 @@ import GameCard from '../GameCard/GameCard';
 import './Game.css';
 import { useEffect, useState } from 'react/cjs/react.development';
 import GameResult from '../GameResult/GameResult';
+import MovesContext from '../../Context/MovesContext';
 // import { useContext } from 'react';
-import GameMoves from '../../Context/GameMoves';
 
 
 
 function Game() {
 
-
-  const [gameState, setGameState] = useState(false);
-  // const gameOn = (userAttackType) => {
-  //   setGameState([userAttackType]); // saving in gameState user's attack 
-  // }
-
-  const [gameMoves, setGameMoves] = useState(0);
-  console.log(gameMoves);
+  const [Moves, setMoves] = useState({
+    player: 0,
+    pc: 0
+  });
   const [result, setResult] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setResult(!result);
-      }, 4000);
-      return () => clearTimeout(timer);
-  }, [])
+    }, 3000);
+    // setResult(!result);
+    return () => clearTimeout(timer);
+  }, [Moves.player])
+
+  // function showGameResult() {
+  //   const timer = setTimeout(() => <GameResult />, 1000);
+  //   return () => clearTimeout(timer); 
+  // }
 
   return (
     <>
-      <GameMoves.Provider value={{ gameMoves, setGameMoves }}>
-        { !gameMoves ? (
+      <MovesContext.Provider value={{ Moves, setMoves }}>
+        { !Moves.player ? (
         <div className="game">
           <GameCard attackIndex={ 1 } />
           <GameCard attackIndex={ 2 } />
@@ -38,12 +40,12 @@ function Game() {
         </div>
         ) : (
         <div className="game-stage">
-          <Picks title="you picked" index={ gameMoves[0] }/>
-          { result && <GameResult /> }
+          <Picks title="you picked" index={ Moves.player }/>
+          { Moves.pc && <GameResult /> }
           <Picks title="the house picked" index={ 0 } />
         </div>
         ) }
-      </GameMoves.Provider>
+      </MovesContext.Provider>
     </>
   );
 }

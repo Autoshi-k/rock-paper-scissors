@@ -1,18 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../../images/logo.svg';
-import { useState } from 'react';
 import './Header.css';
+import Result from '../../Context/Result';
 
 function Header() {
-  
-  const [score, setScore] = useState(0);
+
+  const { result } = useContext(Result);
   
   return (
     <header>
-      <img src={ logo }/>
+      <img src={ logo } alt="page-logo"/>
       <div className="score-display">
         score
-        <div className="score">{ score }</div>
+        <div className="score">{ `${result.score}` }</div>
       </div>
     </header>
   )

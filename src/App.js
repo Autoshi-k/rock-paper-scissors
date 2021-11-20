@@ -11,10 +11,7 @@ function App() {
   const [popupDisplay, setPopupDisplay] = useState(false);
   const togglePopup = () => { setPopupDisplay(!popupDisplay) };
 
-  const [result, setResult] = useState({
-    startAgain: false, 
-    score: 1
-  });
+  const [result, setResult] = useState(1);
 
   console.log(result);
 

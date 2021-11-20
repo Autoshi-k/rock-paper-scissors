@@ -5,7 +5,7 @@ import './Picks.css';
 function Picks({ title, index }) {
 
   return (
-    <div className="pick">
+    <div className={ "pick " + index}>
         <h3>{ title }</h3>
         { (!index) ? <ComputerPick /> : <GameCard attackIndex={ index } />}
     </div>

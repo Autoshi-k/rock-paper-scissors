@@ -11,23 +11,18 @@ import MovesContext from '../../Context/MovesContext';
 function Game() {
 
   const [Moves, setMoves] = useState({
-    player: 0,
-    pc: 0
+    player: null,
+    pc: null,
+    winner: null,
+    declareWinner: () => {
+      const timer = setTimeout(() => {
+        console.log('test');
+        setResult(!result);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
   });
   const [result, setResult] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setResult(!result);
-    }, 3000);
-    // setResult(!result);
-    return () => clearTimeout(timer);
-  }, [Moves.player])
-
-  // function showGameResult() {
-  //   const timer = setTimeout(() => <GameResult />, 1000);
-  //   return () => clearTimeout(timer); 
-  // }
 
   return (
     <>
@@ -40,8 +35,8 @@ function Game() {
         </div>
         ) : (
         <div className="game-stage">
-          <Picks title="you picked" index={ Moves.player }/>
-          { Moves.pc && <GameResult /> }
+          <Picks title="you picked" index={ Moves.player } />
+          { result && <GameResult /> }
           <Picks title="the house picked" index={ 0 } />
         </div>
         ) }

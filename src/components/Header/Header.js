@@ -12,7 +12,7 @@ function Header() {
       <img src={ logo } alt="page-logo"/>
       <div className="score-display">
         score
-        <div className="score">{ `${result.score}` }</div>
+        <div className="score">{ `${result}` }</div>
       </div>
     </header>
   )

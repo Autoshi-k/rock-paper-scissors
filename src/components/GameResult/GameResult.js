@@ -5,28 +5,25 @@ import './GameResult.css';
 import Result from '../../Context/Result';
 import { useEffect } from 'react/cjs/react.development';
 
-function GameResult() {
+function GameResult({ displayResult }) {
   const { Moves, setMoves } = useContext(MovesContext);
   const attacks = useContext(Attacks); 
   const { result, setResult } = useContext(Result);
 
-  // console.log(player);
   const [msgResult, setMsgResult] = useState('');
   const player = attacks.find(attack => attack.index === Moves.player);
   const pc = attacks.find(attack => attack.index === Moves.pc);
   
   useEffect(() => {
-    console.log(player);
-    console.log(pc);
-    if (!pc) {
+    if (pc) {
       if (player.index === pc.index) {
         setMsgResult('it is a tie');
       } else if (player.win === pc.type) {
         setMsgResult('you win');
         setResult(result + 1);
       } else {
-        setMsgResult('you win');
-        if (!result) setResult(result - 1);
+        setMsgResult('you lose');
+        if (result) setResult(result - 1);
       }
     }
   }, [pc]);
@@ -34,6 +31,7 @@ function GameResult() {
   // const msgResult = player.index === pc.index ? 'tie' : player.win === pc.type ? 'you win' : 'you lose';
   
   const playAgain = () => {
+    displayResult(false); 
     setMoves({
       ...Moves,
       player: null,
@@ -41,12 +39,17 @@ function GameResult() {
       winner: null
     })
   }
+  console.log(msgResult);
   
   return (
-    <div className="game-result"> 
-      <h1>{ msgResult }</h1>
-      <button onClick={ playAgain }>play again</button>
-    </div>
+    <>
+      { msgResult &&
+      <div className="game-result"> 
+        <h1>{ msgResult }</h1>
+        <button onClick={ playAgain }>play again</button>
+      </div>
+      }
+    </>
   );
 }
 

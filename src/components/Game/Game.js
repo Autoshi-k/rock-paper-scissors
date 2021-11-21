@@ -9,19 +9,19 @@ import MovesContext from '../../Context/MovesContext';
 
 
 function Game() {
-
+  
   const [Moves, setMoves] = useState({
     player: null,
     pc: null,
     winner: null,
     declareWinner: () => {
       const timer = setTimeout(() => {
-        console.log('test');
         setResult(!result);
       }, 3000);
       return () => clearTimeout(timer);
     }
   });
+  
   const [result, setResult] = useState(false);
 
   return (
@@ -36,7 +36,7 @@ function Game() {
         ) : (
         <div className="game-stage">
           <Picks title="you picked" index={ Moves.player } />
-          { result && <GameResult /> }
+          { result && <GameResult displayResult={ setResult }/> }
           <Picks title="the house picked" index={ 0 } />
         </div>
         ) }
